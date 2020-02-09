@@ -3,7 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyDTZheOJ3NdHTQg7ksMzokNyCu0hUAFXxs",
+    authDomain: "theta-window-233003.firebaseapp.com",
+    databaseURL: "https://theta-window-233003.firebaseio.com",
+    projectId: "theta-window-233003",
+    storageBucket: "theta-window-233003.appspot.com",
+    messagingSenderId: "1010833594506",
+    appId: "1:1010833594506:web:91e532947e3128eced7573",
+    measurementId: "G-LZSC5KXV82"
+  }
 };
 
 /*
