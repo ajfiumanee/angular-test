@@ -15,6 +15,7 @@ import { NavBarComponent } from './Core/nav-bar/nav-bar.component';
 import { CreatePatientsComponent } from './Patients/create-patients/create-patients.component';
 import { PatientsComponent } from './Patients/patients/patients.component';
 import { ListPatientsComponent } from './Patients/list-patients/list-patients.component';
+import { EditPatientsComponent } from './Patients/edit-patients/edit-patients.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListPatientsComponent } from './Patients/list-patients/list-patients.co
     NavBarComponent,
     CreatePatientsComponent,
     PatientsComponent,
-    ListPatientsComponent
+    ListPatientsComponent,
+    EditPatientsComponent
   ],
   imports: [
     BrowserModule,
