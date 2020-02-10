@@ -1,22 +1,20 @@
-<table>
-    <thead>
-      <th>Nome</th>
-      <th>CPF</th>
-      <th></th>
-      <th></th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let patient of patients">
-  
-        <td>{{patient.Nome}}</td>
-        <td>{{patient.CPF}}</td>
-        <td>
-            <button class="btn btn-primary" (click)="edit(patient.Id)">Edit</button>
-        </td>
-        <td>
-            <button class="btn btn-primary" (click)="delete(patient.Id)">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
+<table class="mat-grid-list">
+  <thead>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th></th>
+    <th></th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let patient of patients">
+      <td>{{patient.Nome}}</td>
+      <td>{{patient.CPF}}</td>
+      <td>
+        <button class="btn btn-primary" (click)="edit(patient.Id)">Edit</button>
+      </td>
+      <td>
+        <button class="btn btn-primary" (click)="delete(patient.Id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

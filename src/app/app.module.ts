@@ -11,17 +11,23 @@ import{FormsModule} from '@angular/forms'
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-import { NavBarComponent } from './Core/nav-bar/nav-bar.component';
 import { CreatePatientsComponent } from './Patients/create-patients/create-patients.component';
 import { PatientsComponent } from './Patients/patients/patients.component';
 import { ListPatientsComponent } from './Patients/list-patients/list-patients.component';
 import { EditPatientsComponent } from './Patients/edit-patients/edit-patients.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './Core/navbar/navbar.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
+    NavbarComponent,
     CreatePatientsComponent,
     PatientsComponent,
     ListPatientsComponent,
@@ -36,6 +42,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     BrowserAnimationsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
