@@ -1,6 +1,6 @@
 <h3>Edição de Funcionarios</h3>
 
-<form (ngSubmit)="create()">
+<form (ngSubmit)="create(patients)">
     <div class="from-group">
         <label>Nome</label>
         <input type="text" name="Nome" [(ngModel)]="patients.Nome" class="from-control">
@@ -9,5 +9,5 @@
         <label>CPF</label>
         <input type="text" name="CPF" [(ngModel)]="patients.CPF" class="from-control">
     </div>
-    <button class="btn btn-primary">Gravar</button>
+    <button type="submit" class="btn btn-primary">Gravar</button>
 </form>

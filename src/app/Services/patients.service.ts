@@ -8,7 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class PatientsService {
 
-  private patientSoucer = new BehaviorSubject({patient: null, id: ''});
+  private patientSoucer = new BehaviorSubject({ patient: null, id: '' });
   patient = this.patientSoucer.asObservable();
   constructor(private firestore: AngularFirestore) { }
 
@@ -16,7 +16,7 @@ export class PatientsService {
     return this.firestore.collection('patients').snapshotChanges();
   }
 
-  getPatient(id: string){
+  getPatient(id: string) {
     return this.firestore.collection('patients').doc(id).snapshotChanges();
   }
 
@@ -31,7 +31,6 @@ export class PatientsService {
   }
 
   updatePatients(patients: Patients) {
-    delete patients.Id;
     this.firestore.doc('patients/' + patients.Id).update(patients);
   }
 

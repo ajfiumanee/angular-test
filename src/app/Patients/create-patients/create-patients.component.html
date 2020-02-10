@@ -1,6 +1,6 @@
 <h3>Cadastro de Funcionarios</h3>
 
-<form (ngSubmit)="create()">
+<form (ngSubmit)="create(patients)">
     <div class="from-group">
         <label>Nome</label>
         <input type="text" name="Nome" [(ngModel)]="patients.Nome" class="from-control">
@@ -9,5 +9,8 @@
         <label>CPF</label>
         <input type="text" name="CPF" [(ngModel)]="patients.CPF" class="from-control">
     </div>
-    <button class="btn btn-primary">Gravar</button>
+    <div *ngFor="let error of errors">
+        <label>{{error}}</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Gravar</button>
 </form>

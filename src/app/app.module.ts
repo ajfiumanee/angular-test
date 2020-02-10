@@ -16,6 +16,7 @@ import { CreatePatientsComponent } from './Patients/create-patients/create-patie
 import { PatientsComponent } from './Patients/patients/patients.component';
 import { ListPatientsComponent } from './Patients/list-patients/list-patients.component';
 import { EditPatientsComponent } from './Patients/edit-patients/edit-patients.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { EditPatientsComponent } from './Patients/edit-patients/edit-patients.co
     AngularFirestoreModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
