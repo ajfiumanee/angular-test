@@ -4,13 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
-
-
 import { AngularFireModule } from '@angular/fire';
-import{FormsModule} from '@angular/forms'
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFirestoreModule} from '@angular/fire/firestore';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
+import { FormsModule } from '@angular/forms'
 import { CreatePatientsComponent } from './Patients/create-patients/create-patients.component';
 import { PatientsComponent } from './Patients/patients/patients.component';
 import { ListPatientsComponent } from './Patients/list-patients/list-patients.component';
@@ -23,6 +24,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { LoginComponent } from './Core/login/login.component';
+import { RegisterComponent } from './Core/register/register.component';
+import { UserComponent } from './Core/user/user.component';
+import { AuthService } from './Services/auth.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,10 @@ import { MatListModule } from '@angular/material/list';
     CreatePatientsComponent,
     PatientsComponent,
     ListPatientsComponent,
-    EditPatientsComponent
+    EditPatientsComponent,
+    LoginComponent,
+    RegisterComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +47,7 @@ import { MatListModule } from '@angular/material/list';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     BrowserAnimationsModule,
@@ -49,7 +58,7 @@ import { MatListModule } from '@angular/material/list';
     MatIconModule,
     MatListModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
