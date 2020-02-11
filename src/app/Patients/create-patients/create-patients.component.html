@@ -5,10 +5,6 @@
         <label>Nome</label>
         <input type="text" name="Name" [(ngModel)]="patients.Name" class="from-control">
     </div>
-    <div class="from-group">
-        <label>CPF</label>
-        <input type="text" name="CPF" [(ngModel)]="patients.CPF" class="from-control">
-    </div>
     <div *ngFor="let error of errors">
         <label>{{error}}</label>
     </div>

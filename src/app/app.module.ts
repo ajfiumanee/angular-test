@@ -23,6 +23,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './Core/auth/login/login.component';
 import { RegisterComponent } from './Core/auth/register/register.component';
@@ -57,6 +58,7 @@ import { ForgotPasswordComponent } from './Core/auth/forgot-password/forgot-pass
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,
+    MatGridListModule,
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,

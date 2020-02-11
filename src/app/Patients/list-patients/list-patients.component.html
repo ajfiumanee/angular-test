@@ -1,14 +1,13 @@
 <table class="mat-grid-list">
   <thead>
     <th>Nome</th>
-    <th>CPF</th>
     <th></th>
     <th></th>
   </thead>
   <tbody>
     <tr *ngFor="let patient of patients">
       <td>{{patient.Name}}</td>
-      <td>{{patient.CPF}}</td>
+      <!-- <td>{{patient.Adresses.City}}, {{patient.Adresses.State}}</td> -->
       <td>
         <button class="btn btn-primary" (click)="edit(patient.Id)">Edit</button>
       </td>

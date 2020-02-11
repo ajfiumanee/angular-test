@@ -24,8 +24,7 @@ export class EditPatientsComponent implements OnInit {
       this.patients = new Patients();
       this.patients = {
         Id: resp.payload.id,
-        Name: resp.payload.data()['Name'],
-        CPF: resp.payload.data()['CPF']
+        Name: resp.payload.data()['Name']
       };
       console.log(this.patients);
     });

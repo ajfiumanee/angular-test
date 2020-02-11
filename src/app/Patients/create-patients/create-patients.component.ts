@@ -20,15 +20,14 @@ export class CreatePatientsComponent implements OnInit {
   }
 
   create(patients: Patients) {
-    if ((patients.CPF != "") && (patients.Name != "")) {
+    if (patients.Name != "") {
       let temp = this.patientsService.createPatients(patients).then(ref => {
         if (patients.Id) {
           this.router.navigate(['/pacientes']);
         }
       });
     } else {
-      this.errors = ["Nome em branco",
-        "CPF em branco!"];
+      this.errors = ["Nome em branco"];
     }
   }
 }
