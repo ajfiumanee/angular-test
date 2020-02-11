@@ -22,6 +22,7 @@ export class AuthService {
     this.afAuth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
+        console.log(this.userData);
         localStorage.setItem('user', JSON.stringify(this.userData));
         JSON.parse(localStorage.getItem('user'));
       } else {
@@ -59,9 +60,10 @@ export class AuthService {
 
   // Send email verfificaiton when new user sign up
   SendVerificationMail() {
+    console.log(this.userData);
     return this.afAuth.auth.currentUser.sendEmailVerification()
       .then(() => {
-        this.router.navigate(['verify-email-address']);
+        this.router.navigate(['verify-email']);
       })
   }
 
@@ -120,7 +122,9 @@ export class AuthService {
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['login']);
+      console.log('Aqui');
+      this.router.navigate(['/login']);
+
     })
   }
 

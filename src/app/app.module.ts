@@ -24,10 +24,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { LoginComponent } from './Core/login/login.component';
-import { RegisterComponent } from './Core/register/register.component';
-import { UserComponent } from './Core/user/user.component';
+import { LoginComponent } from './Core/auth/login/login.component';
+import { RegisterComponent } from './Core/auth/register/register.component';
+import { UserComponent } from './Core/auth/user/user.component';
 import { AuthService } from './Services/auth.service';
+import { VerifyEmailComponent } from './Core/auth/verify-email/verify-email.component';
+import { ForgotPasswordComponent } from './Core/auth/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { AuthService } from './Services/auth.service';
     EditPatientsComponent,
     LoginComponent,
     RegisterComponent,
-    UserComponent
+    UserComponent,
+    VerifyEmailComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
