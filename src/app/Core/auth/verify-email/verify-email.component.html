@@ -4,7 +4,7 @@
         <div class="authBlock">
             <h3>Obrigado por se registar</h3>
 
-            <div class="formGroup" *ngIf="authService.userData as user">
+            <div *ngIf="authService.userData as user" class="formGroup" >
                 <p class="text-center">Enviámos um email de confirmação para <strong>{{user.email}}</strong>.</p>
                 <p class="text-center">Verifique seu e-mail e clique no link para verificar seu endereço de e-mail.</p>
             </div>
@@ -19,7 +19,7 @@
 
         </div>
 
-        <div class="redirectToLogin">
+        <div *ngIf="!authService.isLoggedIn" class="redirectToLogin">
             <span>Logar?<span class="redirect" routerLink="/login"> Entrar</span></span>
         </div>
 

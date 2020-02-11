@@ -20,7 +20,7 @@ export class CreatePatientsComponent implements OnInit {
   }
 
   create(patients: Patients) {
-    if ((patients.CPF) && (patients.Nome)) {
+    if ((patients.CPF != "") && (patients.Name != "")) {
       let temp = this.patientsService.createPatients(patients).then(ref => {
         if (patients.Id) {
           this.router.navigate(['/pacientes']);

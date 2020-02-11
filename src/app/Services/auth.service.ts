@@ -36,9 +36,17 @@ export class AuthService {
   SignIn(email, password) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then((result) => {
-        this.ngZone.run(() => {
-          this.router.navigate(['']);
-        });
+        if (this.isLoggedIn !== true) {
+          window.alert("Você não está logado");
+          this.router.navigate(['/login']);
+        } else if (this.isEmailVerifeid !== true) {
+          window.alert("Você não verificou seu email ainda!");
+          this.router.navigate(['/verify-email']);
+        } else {
+          this.ngZone.run(() => {
+            this.router.navigate(['']);
+          });
+        }
         this.SetUserData(result.user);
       }).catch((error) => {
         window.alert(error.message)
@@ -80,7 +88,12 @@ export class AuthService {
   // Returns true when user is looged in and email is verified
   get isLoggedIn(): boolean {
     const user = JSON.parse(localStorage.getItem('user'));
-    return (user !== null && user.emailVerified !== false) ? true : false;
+    return (user !== null) ? true : false;
+  }
+
+  get isEmailVerifeid(): boolean {
+    const user = JSON.parse(localStorage.getItem('user'));
+    return (user.emailVerified !== false) ? true : false;
   }
 
   // Sign in with Google
@@ -122,10 +135,10 @@ export class AuthService {
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
+      this.userData = null;
       console.log('Aqui');
       this.router.navigate(['/login']);
-
-    })
+    });
   }
 
 }
