@@ -7,7 +7,7 @@ import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 @Component({
   selector: 'app-edit-patients',
   templateUrl: './edit-patients.component.html',
-  styleUrls: ['./edit-patients.component.scss']
+  styleUrls: ['./edit-patients.component.sass']
 })
 export class EditPatientsComponent implements OnInit {
   patients: Patients;

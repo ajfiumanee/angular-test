@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-patients',
   templateUrl: './create-patients.component.html',
-  styleUrls: ['./create-patients.component.scss']
+  styleUrls: ['./create-patients.component.sass']
 })
 export class CreatePatientsComponent implements OnInit {
   patients: Patients;

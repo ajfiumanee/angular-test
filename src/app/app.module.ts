@@ -19,12 +19,6 @@ import { EditPatientsComponent } from './Patients/edit-patients/edit-patients.co
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './Core/navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatListModule } from '@angular/material/list';
 import { LoginComponent } from './Core/auth/login/login.component';
 import { RegisterComponent } from './Core/auth/register/register.component';
 import { UserComponent } from './Core/auth/user/user.component';
@@ -56,13 +50,7 @@ import { ForgotPasswordComponent } from './Core/auth/forgot-password/forgot-pass
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatGridListModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule,
+    LayoutModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

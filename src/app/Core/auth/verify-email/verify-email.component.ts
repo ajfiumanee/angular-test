@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-verify-email',
   templateUrl: './verify-email.component.html',
-  styleUrls: ['./verify-email.component.scss']
+  styleUrls: ['./verify-email.component.sass']
 })
 export class VerifyEmailComponent implements OnInit {
 
