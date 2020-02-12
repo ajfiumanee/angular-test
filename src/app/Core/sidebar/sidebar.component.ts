@@ -1,4 +1,5 @@
 import {Component, OnInit, Input, HostBinding, Output, EventEmitter  } from '@angular/core';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,10 +8,15 @@ import {Component, OnInit, Input, HostBinding, Output, EventEmitter  } from '@an
 })
 export class SidebarComponent implements OnInit {
   @Output() toggle = new EventEmitter();
-
-  constructor() { }
+  @Input() @HostBinding('class.--open') isSidebarOpen: boolean;
+  
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    
   }
 
+  logout() {
+    this.authService.SignOut();
+  }
 }

@@ -12,9 +12,9 @@ import { SecureInnerPagesGuard } from './Guard/secure-inner-pages.guard';
 import { AuthGuard } from './Guard/auth.guard';
 
 const routes: Routes = [
-  { path: "pacientes/create", component: CreatePatientsComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: "pacientes/edit", component: EditPatientsComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: "pacientes", component: PatientsComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: "patients/create", component: CreatePatientsComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: "patients/edit", component: EditPatientsComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: "patients", component: PatientsComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
   { path: 'user', component: UserComponent, canActivate: [SecureInnerPagesGuard] },

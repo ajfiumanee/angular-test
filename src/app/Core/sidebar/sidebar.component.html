@@ -1,39 +1,61 @@
-<div class="menu-toggle" (click)="toggle.emit()">
-    <div class="menu-toggle__inner">
-      <i class="material-icons">menu</i>
+<div class="menus-container">
+  <div class="user">
+    <div class="photo-container" [routerLink]="['/user']">
+      <div class="photo"></div>
+    </div>
+    <div class="user-desc">
+      <p>Usuario Teste</p>
+      <i class="menu-item-icon material-icons material-icons-arrow"
+        routerLinkActive="menu-item-icon material-icons material-icons-arrow--active">keyboard_arrow_down</i>
     </div>
   </div>
-  <div class="logo-container" [routerLink]="['/home']">
-    <div class="logo"></div>
-  </div>
-  <div class="menus-container">
-    <div class="menus">
-  
-      <div class="menu-item" [routerLink]="['/orcamentos']" routerLinkActive="menu-item--active">
-        <i class="menu-item-icon material-icons">assignment</i>
-        <span class="menu-item-desc">Consultar orçamentos</span>
-      </div>
-  
-      <div class="menu-item" [routerLink]="['/orcamento/novo']" routerLinkActive="menu-item--active">
-        <i class="menu-item-icon material-icons">note_add</i>
-        <span class="menu-item-desc">Novo orçamento</span>
-      </div>
-      <div class="menu-item" [routerLink]="['/sync-data']" routerLinkActive="menu-item--active">
-        <i class="menu-item-icon material-icons">call_received</i>
-        <span class="menu-item-desc">Sincronizar dados</span>
-      </div>
-      <div class="menu-item" [routerLink]="['/sync-orcamento']" routerLinkActive="menu-item--active">
-        <i class="menu-item-icon material-icons">send</i>
-        <span class="menu-item-desc">Enviar orçamentos</span>
-      </div>
-  
+  <div class="menus">
+    <div class="menu-item" [routerLink]="['/dashboard']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">dashboard</i>
+      <span class="menu-item-desc">Dashboard</span>
+    </div>
+    <div class="menu-item" [routerLink]="['/patients']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">message</i>
+      <span class="menu-item-desc">Pacientes</span>
+    </div>
+    <div class="menu-item" [routerLink]="['/therapist']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">assignment</i>
+      <span class="menu-item-desc">Terapeutas</span>
+    </div>
+    <div class="menu-item" [routerLink]="['/des']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">people</i>
+      <span class="menu-item-desc">Desempenho</span>
+    </div>
+    <div class="menu-item" [routerLink]="['/ref']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">message</i>
+      <span class="menu-item-desc">Relatórios</span>
+      <i class="menu-item-icon material-icons material-icons-arrow"
+        routerLinkActive="menu-item-icon material-icons material-icons-arrow--active">keyboard_arrow_down</i>
     </div>
   </div>
-  
-  <div class="versao-container">
-    <div class="versao">
-      <span class="versao__text-normal aparece-expandido padding--right">Versão </span>
-      <span class="versao__text-bold">1.1.4</span>
+  <div class="menu-settings">
+    <div class="menu-settings-info">
+      Configurações
+    </div>
+    <div class="menu-item" [routerLink]="['/generalregistration']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">assignment</i>
+      <span class="menu-item-desc">Cadastros gerais</span>
+    </div>
+    <div class="menu-item" [routerLink]="['/generalsettings']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">settings</i>
+      <span class="menu-item-desc">Config. gerais</span>
+    </div>
+    <div class="menu-item" [routerLink]="['/notifications']" routerLinkActive="menu-item--active">
+      <i class="menu-item-icon material-icons">notifications</i>
+      <span class="menu-item-desc">Notificações</span>
     </div>
   </div>
-  
+
+  <div class="version-container">
+    <div class="version">
+      <span class="version__text-normal padding--right">Versão </span>
+      <span class="version__text-bold">0.1</span>
+    </div>
+  </div>
+
+</div>
