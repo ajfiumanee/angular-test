@@ -29,8 +29,7 @@
             ],
             "styles": [
               "src/styles.sass",
-              "src/app/assets/sass/styles.sass"
-            ],
+              "src/assets/sass/styles.sass"            ],
             "scripts": []
           },
           "configurations": {
@@ -95,7 +94,7 @@
             ],
             "styles": [
               "src/styles.sass",
-              "src/app/assets/sass/styles.sass"
+              "src/assets/sass/styles.sass"
             ],
             "scripts": []
           }

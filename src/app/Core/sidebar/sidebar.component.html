@@ -1,1 +1,39 @@
-<p>sidebar works!</p>
+<div class="menu-toggle" (click)="toggle.emit()">
+    <div class="menu-toggle__inner">
+      <i class="material-icons">menu</i>
+    </div>
+  </div>
+  <div class="logo-container" [routerLink]="['/home']">
+    <div class="logo"></div>
+  </div>
+  <div class="menus-container">
+    <div class="menus">
+  
+      <div class="menu-item" [routerLink]="['/orcamentos']" routerLinkActive="menu-item--active">
+        <i class="menu-item-icon material-icons">assignment</i>
+        <span class="menu-item-desc">Consultar orçamentos</span>
+      </div>
+  
+      <div class="menu-item" [routerLink]="['/orcamento/novo']" routerLinkActive="menu-item--active">
+        <i class="menu-item-icon material-icons">note_add</i>
+        <span class="menu-item-desc">Novo orçamento</span>
+      </div>
+      <div class="menu-item" [routerLink]="['/sync-data']" routerLinkActive="menu-item--active">
+        <i class="menu-item-icon material-icons">call_received</i>
+        <span class="menu-item-desc">Sincronizar dados</span>
+      </div>
+      <div class="menu-item" [routerLink]="['/sync-orcamento']" routerLinkActive="menu-item--active">
+        <i class="menu-item-icon material-icons">send</i>
+        <span class="menu-item-desc">Enviar orçamentos</span>
+      </div>
+  
+    </div>
+  </div>
+  
+  <div class="versao-container">
+    <div class="versao">
+      <span class="versao__text-normal aparece-expandido padding--right">Versão </span>
+      <span class="versao__text-bold">1.1.4</span>
+    </div>
+  </div>
+  

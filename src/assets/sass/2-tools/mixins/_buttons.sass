@@ -21,10 +21,9 @@
     .open > &.dropdown-toggle
         background-image: none  
         
-    &.disabled,
+    &.disabled, 
     &[disabled],
-    fieldset[disabled] &   
-    &,
+    fieldset[disabled],
     &:hover,
     &:focus,
     &.focus,
@@ -33,14 +32,10 @@
         color: $btn-disabled-color
         background-color: $btn-disabled-bg
         border-color: $btn-disabled-border
-        
-        
     .badge
         color: $background  
         background-color: $color  
-    
-  
-
+        
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius)   
     padding: $padding-vertical $padding-horizontal

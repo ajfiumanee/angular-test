@@ -1,0 +1,167 @@
+@import "src/assets/sass/simple.sass"
+
+$sidebar-width: 83px
+$sidebar-width-expanded: 280px
+$sidebar-bg: linear-gradient(#193e75 0%, #0d1f3b 100%)
+$menu-toggle-size: 30px
+$menu-toggle-bg: white
+$header-height: 50px
+
+:host 
+  display: flex
+  flex-direction: column
+  width: $sidebar-width
+  height: 100%
+  transition: width 0.5s ease
+  box-shadow: 5px 0px 6px rgba(0, 0, 0, 0.16)
+  background: $sidebar-bg
+  position: relative
+
+  &.--open 
+    width: $sidebar-width-expanded  
+
+.menu-toggle 
+  -webkit-app-region: no-drag
+  &__inner 
+    cursor: pointer
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+    width: $menu-toggle-size
+    height: $menu-toggle-size
+    background-color: $menu-toggle-bg
+    color: $brand-primary
+    border-radius: $menu-toggle-size
+    box-shadow: 5px 0px 6px rgba(0, 0, 0, 0.16)
+
+    position: absolute
+    top: $header-height/2 - $menu-toggle-size/2
+    right: -$menu-toggle-size/2
+    z-index: 900
+    > .material-icons 
+      font-size: 1.1em
+
+.logo-container 
+  display: flex
+  justify-content: center
+  cursor: pointer
+  z-index: 1
+  flex: 0 0 auto
+  outline: none
+  margin: 50px 1em
+  overflow: hidden
+  max-width: 100%
+
+.logo 
+  flex: 1 0 auto
+  width: 55px
+  height: 55px
+  background-image: url('/assets/images/Grupo de máscara 1@2x.png')
+  background-repeat: no-repeat
+  background-position: center
+  background-size: contain
+  filter: contrast(2)
+
+  :host.--open & 
+    background-image: url('/assets/images/Grupo 697@2x.png')
+    width: 204.75px
+    height: 83px
+  
+.menus-container 
+  overflow-x: hidden
+  overflow-y: auto
+  width: 100%
+  height: 100vh
+
+.menus 
+  padding: 0 0.5em
+  width: $sidebar-width
+  margin: 0 auto
+
+  :host.--open & 
+    width: $sidebar-width-expanded
+  
+.menu-item 
+  outline: none
+  width: 100%
+  display: flex
+  color: white
+  align-items: center
+  cursor: pointer
+  transition: none 0.25s ease
+  justify-content: center
+  flex: 0 0 auto
+  text-transform: capitalize
+  margin-bottom: 0.75em
+  flex-direction: column
+  padding: 0.25em
+
+  &--active, &:hover 
+    color: $brand-primary
+    border-color: white
+    background-color: white
+    border-radius: 3px
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
+  
+  :host.--open & 
+    flex-direction: row
+    // border-bottom: 1px solid white
+    justify-content: flex-start
+    padding: 0
+
+    &--active, &:hover 
+      // border-bottom: 1px solid $brand-primary
+    
+.menu-item-icon 
+  font-size: 35px
+
+  :host.--open & 
+    margin-left: 15.5px
+    font-size: 30px
+  
+.menu-item-desc 
+  flex: 1
+  font-size: 12px
+  text-align: center
+
+  :host.--open & 
+    text-align: left
+    margin-left: 11px
+    font-size: 18px
+    line-height: 40px
+  
+.versao-container
+  width: 100%
+  display: flex
+
+.versao
+  padding: 1rem
+  width: $sidebar-width
+  margin: 0 auto
+  text-align: center
+
+  :host.--open & 
+    width: $sidebar-width-expanded
+  
+  &__text-normal 
+    color: white
+
+  &__text-bold 
+    color: white
+    font-weight: 600
+
+.padding
+  &--left
+    padding-left: 0.5em
+  
+  &--right
+    padding-right: 0.5em
+
+.aparece-expandido
+  display: none
+  :host.--open & 
+    display: inline-block
+  
+
