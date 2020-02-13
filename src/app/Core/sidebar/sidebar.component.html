@@ -1,12 +1,12 @@
 <div class="menus-container">
-  <div class="user">
+  <div class="user" *ngIf="authService.userData as user">
     <div class="photo-container" [routerLink]="['/user']">
       <div class="photo"></div>
     </div>
     <div class="user-desc">
-      <span class="user-desc-span">Usuario Teste </span>
-      <i class="menu-item-icon material-icons material-icons-arrow"
-        routerLinkActive="menu-item-icon material-icons material-icons-arrow--active">keyboard_arrow_down</i>
+      <span class="user-desc-span">{{(user.displayName) ? user.displayName : 'n/D'}} </span>
+      <i class="menu-item-icon material-icons material-icons-users"
+        routerLinkActive="menu-item-icon material-icons material-icons-users--active">arrow_drop_down</i>
     </div>
   </div>
   <div class="menus">
