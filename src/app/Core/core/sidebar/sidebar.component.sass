@@ -6,7 +6,7 @@ $sidebar-bg: $body-bg
 $menu-toggle-size: 30px
 $menu-toggle-bg: white
 $header-height: 50px
-$icon-color: rgba(0, 0, 0, 0.54)
+$icon-color: rgba(0, 0, 0, 0.87)
 
 :host 
   display: flex
@@ -43,6 +43,7 @@ $icon-color: rgba(0, 0, 0, 0.54)
 
       > .material-icons 
         font-size: 1.1em
+
     &--active, &:hover 
           color: $component-active-color
           border-color: white
@@ -52,83 +53,6 @@ $icon-color: rgba(0, 0, 0, 0.54)
           
           i, span
             color: $component-active-color
-
-  .user
-    margin-bottom: 8px
-    box-shadow: 0px 1px 1px #E5E5E5
-
-
-  .user-desc
-    display: flex
-    flex-direction: row
-    margin-top: 24px
-    margin-left: 16px
-    width: 239px
-    text-align: left
-    flex: 1
-    text-transform: capitalize
-    font-size: 20px
-    line-height: 30px
-    letter-spacing: 0.15px
-    &--active, &:hover 
-          color: $component-active-color
-          border-color: white
-          background-color: $component-active-bg-color
-          border-radius: 4px
-          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
-          
-          i, span
-            color: $component-active-color
-
-  .user-desc-span
-    margin-top: 5px
-    padding: 3px
-    height: 35px
-    width: 183px
-   
-
-  .material-icons-users
-    margin: 5px
-
-    &--active, &:hover 
-      color: $component-active-color
-      border-color: white
-      background-color: $component-active-bg-color
-      border-radius: 4px
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
-      
-      i, span
-        color: $component-active-color
-
-  .user-desc-info
-    padding: 0.3em 0.5em
-    width: $sidebar-width-expanded
-    margin: 0 auto
-
-  .user-info-desc
-    width: $sidebar-width-expanded
-    height: 40px
-    display: flex
-    font-size: 14px
-    color: $text-color
-    align-items: right
-    text-align: right
-    text-transform: capitalize
-    cursor: pointer
-    transition: none 0.25s ease
-    flex: 0 0 auto
-    margin-bottom: 10px
-    flex-direction: row
-    padding: 0.25em
-    
-    &:hover 
-      color: $component-active-color
-      border-color: white
-      background-color: $component-active-bg-color
-      border-radius: 4px
-      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) 
-      span
-        color: $component-active-color
     
   .photo-container 
     width: 40px
@@ -153,7 +77,76 @@ $icon-color: rgba(0, 0, 0, 0.54)
     height: 100%
     margin-left: -25%
     margin-right: -25%
-  
+
+  .user-desc
+    outline: none
+    height: 100%
+    display: flex
+    flex-direction: row
+    color: $text-color
+    width: 239px
+    height: 100%
+    text-align: left
+    flex: 0 0 auto
+    text-transform: capitalize
+    font-size: 20px
+    line-height: 30px
+    letter-spacing: 0.15px
+    padding: 0 5px 0 18px
+    margin-top: 26px
+    span 
+      height: 100%
+      width: 183px
+      padding-top: 0px
+      font-size: 20px
+    
+    &--active, &:hover 
+      color: $component-active-color
+      border-color: white
+      background-color: $component-active-bg-color
+      border-radius: 4px
+      cursor: pointer
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16)
+      i, span
+        color: $component-active-color
+      .material-icons-arrow
+        color: $icon-color
+
+  .user-desc-span
+    margin-top: 5px
+    padding: 3px
+    height: 35px
+    width: 183px
+
+  .user-desc-info
+    margin-top: 8px
+    margin-left: 24px
+    display: none
+    &--active
+      display: flex
+
+  .user-desc-info-item
+    height: 40px
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: row
+    flex: 0 0 auto
+    font-size: 14px
+    color: $text-color
+    cursor: pointer
+    margin-bottom: 10px
+    padding: 0.25em
+    
+    &:hover 
+      color: $component-active-color
+      border-color: white
+      background-color: $component-active-bg-color
+      border-radius: 4px
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16) 
+      span
+        color: $component-active-color
+
 .menus-container 
   overflow-x: hidden
   overflow-y: hidden
@@ -205,9 +198,11 @@ $icon-color: rgba(0, 0, 0, 0.54)
     
     i, span
       color: $component-active-color
+    .material-icons-arrow
+      color: $icon-color  
 
 .menu-item-icon 
-  margin-left: 0.75em
+  margin-left: 11px
   font-size: 35px
   
 .menu-item-desc 
@@ -220,9 +215,10 @@ $icon-color: rgba(0, 0, 0, 0.54)
   color: rgba(0, 0, 0, 0.54)
 
 .material-icons-arrow
-  color: rgba(0, 0, 0, 0.87)
+  color: $icon-color
+  margin: auto
   &--active, &:hover 
-    color: rgba(0, 0, 0, 0.87) !important
+    color: $icon-color !important
   
 .version-container
   width: 100%

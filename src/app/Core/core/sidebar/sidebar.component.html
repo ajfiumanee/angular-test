@@ -4,18 +4,18 @@
   </div>
 </div>
 <div class="menus-container" *ngIf="isSidebarOpen">
-  <div class="user" *ngIf="authService.userData as user">
+  <div class="menus" *ngIf="authService.userData as user">
     <div class="photo-container" [routerLink]="['/user']">
       <div class="photo"></div>
     </div>
     <div class="user-desc" routerLinkActive="user-desc--active">
       <span class="user-desc-span">{{(user.displayName) ? user.displayName : 'n/D'}} </span>
-      <i class="menu-item-icon material-icons material-icons-users"
-        routerLinkActive="menu-item-icon material-icons material-icons-users--active">arrow_drop_down</i>
+      <i class="menu-item-icon material-icons material-icons-arrow"
+        routerLinkActive="menu-item-icon material-icons material-icons-arrow--active">keyboard_arrow_down</i>
     </div>
     <div class="user-desc-info">
-        <p class="user-info-desc">Minha agenda</p>
-        <p class="user-info-desc">Alterar senha</p>
+      <p class="user-desc-info-item">Minha agenda</p>
+      <p class="user-desc-info-item">Alterar senha</p>
     </div>
   </div>
   <div class="menus" *ngIf="!authService.isLoggedIn">

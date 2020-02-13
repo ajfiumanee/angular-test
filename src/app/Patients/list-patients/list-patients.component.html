@@ -1,19 +1,31 @@
-<table class="mat-grid-list">
-  <thead>
-    <th>Nome</th>
-    <th></th>
-    <th></th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let patient of patients">
-      <td>{{patient.Name}}</td>
-      <!-- <td>{{patient.Adresses.City}}, {{patient.Adresses.State}}</td> -->
-      <td>
-        <button class="btn btn-primary" (click)="edit(patient.Id)">Edit</button>
-      </td>
-      <td>
-        <button class="btn btn-primary" (click)="delete(patient.Id)">Delete</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+  <table class="table">
+    <thead>
+      <th>Paciente</th>
+      <th>Status</th>
+      <th>Valor(diferença)</th>
+      <th>Pedido enviado em</th>
+      <th>Último contato em</th>
+      <th>Data do follow</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{patient.Name}}</td>
+        <!-- <td>{{patient.Adresses.City}}, {{patient.Adresses.State}}</td> -->
+        <td>
+          1ª
+        </td>
+        <td>
+          1ª
+        </td>
+        <td>
+          1ª
+        </td>
+        <td>
+          1ª
+        </td>
+        <td>
+          1ª
+        </td>
+      </tr>
+    </tbody>
+  </table>
