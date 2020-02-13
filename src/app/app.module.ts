@@ -17,7 +17,6 @@ import { PatientsComponent } from './Patients/patients/patients.component';
 import { ListPatientsComponent } from './Patients/list-patients/list-patients.component';
 import { EditPatientsComponent } from './Patients/edit-patients/edit-patients.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './Core/navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { LoginComponent } from './Core/auth/login/login.component';
 import { RegisterComponent } from './Core/auth/register/register.component';
@@ -25,12 +24,12 @@ import { UserComponent } from './Core/auth/user/user.component';
 import { AuthService } from './Services/auth.service';
 import { VerifyEmailComponent } from './Core/auth/verify-email/verify-email.component';
 import { ForgotPasswordComponent } from './Core/auth/forgot-password/forgot-password.component';
-import { SidebarComponent } from './Core/sidebar/sidebar.component';
+import { SidebarComponent } from './Core/core/sidebar/sidebar.component';
+import { CoreComponent } from './Core/core/core.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CreatePatientsComponent,
     PatientsComponent,
     ListPatientsComponent,
@@ -40,7 +39,8 @@ import { SidebarComponent } from './Core/sidebar/sidebar.component';
     UserComponent,
     VerifyEmailComponent,
     ForgotPasswordComponent,
-    SidebarComponent
+    SidebarComponent,
+    CoreComponent
   ],
   imports: [
     BrowserModule,
