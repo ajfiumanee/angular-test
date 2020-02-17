@@ -6,7 +6,9 @@
 <div class="menus-container" *ngIf="isSidebarOpen">
   <div class="menus" *ngIf="authService.userData as user">
     <div class="photo-container" [routerLink]="['/user']">
-      <div class="photo"></div>
+      <img class="photo" src="{{(user.photoURL) ? user.photoURL : '/assets/images/dummy-user.png'}}"
+        alt="{{(user.displayName)? user.displayName : 'Sem foto'}}">
+
     </div>
     <div class="user-desc" routerLinkActive="user-desc--active">
       <span class="user-desc-span">{{(user.displayName) ? user.displayName : 'n/D'}} </span>
@@ -34,7 +36,7 @@
   </div>
   <div *ngIf="authService.isLoggedIn">
     <div class="menus">
-      <div class="menu-item" [routerLink]="['/dashboard']" routerLinkActive="menu-item--active">
+      <div class="menu-item" [routerLink]="['/home']" routerLinkActive="menu-item--active">
         <i class="menu-item-icon material-icons">dashboard</i>
         <span class="menu-item-desc">Dashboard</span>
       </div>

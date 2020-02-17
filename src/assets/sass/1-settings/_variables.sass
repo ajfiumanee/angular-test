@@ -7,15 +7,20 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default 
-$gray-darker:            lighten($gray-base, 13.5%) !default  // #222
-$gray-dark:              lighten($gray-base, 20%) !default    // #333
-$gray:                   lighten($gray-base, 33.5%) !default  // #555
-$gray-light:             lighten($gray-base, 46.7%) !default  // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default  // #eee
+$gray-darker:            rgba(0, 0, 0, 0.54)
+$gray-dark:              rgba(0, 0, 0, 0.24)
+$gray:                   #9E9E9E
+$gray-light:             rgba(0, 0, 0, 0.24)
+$gray-lighter:           #FBFCFD
 
-$brand-primary:         #2196F3 !default 
-$brand-success:         darken($brand-primary, 6.5%) !default 
+//## Blue
+$blue-darker:            #1976D2
+$blue-dark:              #2196F3
+$blue-light:             #E3F2FD
+
+
+$brand-primary:         $blue-dark !default 
+$brand-success:         $blue-darker
 $brand-info:            #17a2b8 !default 
 $brand-warning:         #b39b18 !default 
 $brand-danger:          #FF0000 !default 
@@ -26,11 +31,12 @@ $brand-danger:          #FF0000 !default
 
 //** Background color for `<body>`.
 $body-bg:               #FFFFFF !default 
+
 //** Global text color on `<body>`.
 $text-color:            #000000 !default 
 
 //** Global textual link color.
-$link-color:            $brand-primary !default 
+$link-color:            $blue-dark !default 
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default 
 //** Link hover decoration.
@@ -98,10 +104,10 @@ $border-radius-large:       6px !default
 $border-radius-small:       3px !default 
 
 //** Global color for active items (e.g., navs or dropdowns).
-$component-active-color:    #2196F3 !default 
-$component-active-bg-color:    #E3F2FD !default 
+$component-active-color:    $blue-dark !default 
+$component-active-bg-color: $blue-light !default 
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-primary !default 
+$component-active-bg:       $blue-dark !default 
 
 //** Width of the `border` for generating carets that indicator dropdowns.
 $caret-width-base:          4px !default 

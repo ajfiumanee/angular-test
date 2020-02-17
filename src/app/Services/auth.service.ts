@@ -20,22 +20,30 @@ export class AuthService {
     /* Saving user data in localstorage when 
     logged in and setting up null when logged out */
     this.afAuth.authState.subscribe(user => {
-      if (user) {
-        this.userData = user;
-        console.log(this.userData);
-        localStorage.setItem('user', JSON.stringify(this.userData));
-        JSON.parse(localStorage.getItem('user'));
-      } else {
-        localStorage.setItem('user', null);
-        JSON.parse(localStorage.getItem('user'));
-      }
+
+      console.log(user);
+
+      this.setLocalStorage(user);
     })
+  }
+
+  setLocalStorage(user: any) {
+    if (user) {
+      this.userData = user;
+      localStorage.setItem('user', JSON.stringify(this.userData));
+      JSON.parse(localStorage.getItem('user'));
+    } else {
+      localStorage.setItem('user', null);
+      JSON.parse(localStorage.getItem('user'));
+    }
   }
 
   // Sign in with email/password
   SignIn(email, password) {
     return this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then((result) => {
+      .then(result => {
+        console.log(result);
+        this.setLocalStorage(result);
         if (this.isLoggedIn !== true) {
           window.alert("Você não está logado");
           this.router.navigate(['/login']);
@@ -49,7 +57,7 @@ export class AuthService {
         }
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message)
+        window.alert(error.message);
       })
   }
 
@@ -62,13 +70,12 @@ export class AuthService {
         this.SendVerificationMail();
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error.message)
+        window.alert(error.message);
       })
   }
 
   // Send email verfificaiton when new user sign up
   SendVerificationMail() {
-    console.log(this.userData);
     return this.afAuth.auth.currentUser.sendEmailVerification()
       .then(() => {
         this.router.navigate(['verify-email']);
@@ -79,9 +86,9 @@ export class AuthService {
   ForgotPassword(passwordResetEmail) {
     return this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
       .then(() => {
-        window.alert('Password reset email sent, check your inbox.');
+        window.alert('E-mail de redefinição de senha enviado, verifique sua caixa de entrada.');
       }).catch((error) => {
-        window.alert(error)
+        window.alert(error);
       })
   }
 
@@ -110,7 +117,7 @@ export class AuthService {
         })
         this.SetUserData(result.user);
       }).catch((error) => {
-        window.alert(error)
+        window.alert(error);
       })
   }
 
@@ -136,7 +143,6 @@ export class AuthService {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
       this.userData = null;
-      console.log('Aqui');
       this.router.navigate(['/login']);
     });
   }

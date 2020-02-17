@@ -1,4 +1,99 @@
-<app-list-patients></app-list-patients>
-<div fxflex fxLayout="column">
-    <button class="bnt btn-primary" routerLink="/pacientes/create" routerLinkActive="active">New Patients</button>
+<div class="header">
+    <i class="material-icons">arrow_left</i>
+    <div class="header-title">
+        Pipeline
+    </div>
+</div>
+<div class="filter-containe">
+    <div class="filter-left">
+        <div class="row" style="margin-bottom: 10px !important;">
+            <div class="column column-4 filter-card">
+                <div class="filter-card-title">Responsável comercial</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Amanda">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+            <div class="column column-4 filter-card">
+                <div class="filter-card-title">Responsável financeiro</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Amil">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+            <div class="column column-4 filter-card">
+                <div class="filter-card-title">Tem plano?</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Sim">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column column-4 filter-card">
+                <div class="filter-card-title">Tem liminar?</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Sim">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+            <div class="column column-4 filter-card">
+                <div class="filter-card-title">Estado</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="São Paulo">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+            <div class="column column-4 filter-card">
+                <div class="filter-card-title">Cidade</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Campinas">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter-center">
+        <div class="line"></div>
+    </div>
+    <div class="filter-rigth">
+        <div class="row">
+            <div class="column column-12 filter-card">
+                <div class="filter-card-title">Status</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Todos">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column column-12 filter-card">
+                <div class="filter-card-title">Tempo sem contato</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="5 dias">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="filter-bottom">
+        <div class="row">
+            <div class="column column-3 filter-card">
+                <div class="filter-card-title">Sênior</div>
+                <div class="filter-itens-desc">
+                    <input class="autocomplete" type="text" value="Júlia">
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </div>
+            </div>
+            <div class="column column-9 filter-seach">
+                <input class="filter-seach-input" type="text"
+                    placeholder="Busque por nome do paciente, número do telefone, e-mail, CPF dos pais, etc">
+                <i class="material-icons">search</i>
+            </div>
+        </div>
+    </div>
+    <app-list-patients></app-list-patients>
+    <div>
+        <button class="bnt btn-primary" routerLink="/pacientes/create" routerLinkActive="active">New Patients</button>
+    </div>
 </div>

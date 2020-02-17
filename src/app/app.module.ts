@@ -26,6 +26,7 @@ import { VerifyEmailComponent } from './Core/auth/verify-email/verify-email.comp
 import { ForgotPasswordComponent } from './Core/auth/forgot-password/forgot-password.component';
 import { SidebarComponent } from './Core/core/sidebar/sidebar.component';
 import { CoreComponent } from './Core/core/core.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { CoreComponent } from './Core/core/core.component';
     VerifyEmailComponent,
     ForgotPasswordComponent,
     SidebarComponent,
-    CoreComponent
+    CoreComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

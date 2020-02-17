@@ -25,7 +25,7 @@ export class PatientsService {
       ...patients
     }).then(ref => {
       patients.Id = ref.id;
-      console.log(`successful and Id: ${ref.id}`);
+      console.log(`Successful and Id: ${ref.id}`);
     }).catch(err => { console.log(`Error: ${err}`); }
     );
   }

@@ -10,12 +10,15 @@ import { VerifyEmailComponent } from './Core/auth/verify-email/verify-email.comp
 import { ForgotPasswordComponent } from './Core/auth/forgot-password/forgot-password.component'
 import { SecureInnerPagesGuard } from './Guard/secure-inner-pages.guard';
 import { AuthGuard } from './Guard/auth.guard';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: "patients/create", component: CreatePatientsComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: "patients/edit", component: EditPatientsComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: '', component: HomeComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'patients/create', component: CreatePatientsComponent, canActivate: [SecureInnerPagesGuard] },
+  { path: 'patients/edit', component: EditPatientsComponent, canActivate: [SecureInnerPagesGuard] },
   { path: "patients", component: PatientsComponent, canActivate: [SecureInnerPagesGuard] },
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'user', component: UserComponent, canActivate: [SecureInnerPagesGuard] },
   { path: 'verify-email', component: VerifyEmailComponent, canActivate: [SecureInnerPagesGuard] },
