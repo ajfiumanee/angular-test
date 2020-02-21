@@ -1,0 +1,50 @@
+<div class="grid-container">
+    <div class="grid">
+        <div class="row no-margin ">
+            <div class="col-xs-1 grid-title" style="border-left: none;">
+                <div class="title">
+                    <span>Nome</span>
+                    <i class="material-icons filter-icons">play_arrow</i>
+                </div>
+            </div>
+            <div class="col-xs-1 grid-title">
+                <div class="title">
+                    <span>E-mail</span>
+                    <i class="material-icons filter-icons">play_arrow</i>
+                </div>
+            </div>
+            <div class="col-xs-1 grid-title">
+                <div class="title">
+                    <span>Perfil</span>
+                    <i class="material-icons filter-icons">play_arrow</i>
+                </div>
+            </div>
+        </div>
+        <!-- Itens -->
+        <div class="row no-margin" *ngFor="let user of users" >
+            <div class="col-xs-1 grid-items" style="border-left: none;">
+                <div class="items-card">
+                    <div class="items-card-photo">
+                        <img class="photo"
+                            src="{{(user.photoURL) ? user.photoURL : '/assets/images/dummy-user.png'}}"
+                            alt="Sem foto">
+                    </div>
+                    <div class="items-card-container">
+                        <div class="items-card-title">
+                            <span>{{user.displayName}}</span>
+                        </div>
+                        <div class="items-card-adresses">
+                            <span>{{user.emailVerified}}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-1 grid-items desc">
+                <span>{{user.email}}</span>
+            </div>
+            <div class="col-xs-1 grid-items desc">
+                <span>{{user.providerId}}</span>
+            </div>
+        </div>
+    </div>
+</div>

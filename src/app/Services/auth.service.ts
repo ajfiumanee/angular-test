@@ -52,7 +52,7 @@ export class AuthService {
           this.router.navigate(['/verify-email']);
         } else {
           this.ngZone.run(() => {
-            this.router.navigate(['']);
+            this.router.navigate(['home']);
           });
         }
         this.SetUserData(result.user);
@@ -116,6 +116,7 @@ export class AuthService {
           this.router.navigate(['']);
         })
         this.SetUserData(result.user);
+        this.setLocalStorage(result);
       }).catch((error) => {
         window.alert(error);
       })

@@ -1,31 +1,101 @@
-  <table class="table" style="max-width: 95%;">
-    <thead>
-      <th>Paciente</th>
-      <th>Status</th>
-      <th>Valor(diferença)</th>
-      <th>Pedido enviado em</th>
-      <th>Último contato em</th>
-      <th>Data do follow</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let patient of patients">
-        <td>{{patient.Name}}</td>
-        <!-- <td>{{patient.Adresses.City}}, {{patient.Adresses.State}}</td> -->
-        <td>
-          1ª
-        </td>
-        <td>
-          1ª
-        </td>
-        <td>
-          1ª
-        </td>
-        <td>
-          1ª
-        </td>
-        <td>
-          1ª
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="grid-container">
+  <div class="grid">
+    <div class="row no-margin ">
+      <div class="col-xs-1 grid-title" style="min-width: 271px;">
+        <div class="title">
+          <span>Paciente</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Status</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Valor (diferença)</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Pedido enviado em</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Último contato em</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Data do follow up</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Resp. financeiro</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title" style="min-width: 200px;">
+        <div class="title">
+          <span>Aguardando retorno de</span>
+          <i class="material-icons filter-icons">play_arrow</i>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-title">
+        <div class="title">
+          <span>Obs</span>
+        </div>
+      </div>
+    </div>
+    <div class="row no-margin " *ngFor="let patient of patients">
+      <div class="col-xs-1 grid-items" style="min-width: 271px;">
+        <div class="items-card">
+          <div class="items-card-photo">
+            <img class="photo" src="{{(patient.URLPhoto) ? patient.URLPhoto : '/assets/images/dummy-user.png'}}"
+              alt="Sem foto">
+          </div>
+          <div class="items-card-container">
+            <div class="items-card-title">
+            <span>{{patient.Name}}</span>
+            </div>
+            <div class="items-card-adresses">
+            <span>{{patient.Adresses["City"]}}, {{patient.Adresses["State"]}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>1º contato</span>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>R$ 1.903,60</span>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>09/10</span>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>23/10</span>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>50/11</span>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>Unimed Campinas</span>
+      </div>
+      <div class="col-xs-1 grid-items desc" style="min-width: 200px;">
+        <span>Família</span>
+      </div>
+      <div class="col-xs-1 grid-items desc">
+        <span>Teste OBS</span>
+      </div>
+    </div>
+  </div>
+</div>

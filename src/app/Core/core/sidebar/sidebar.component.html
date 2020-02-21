@@ -20,7 +20,7 @@
       <p class="user-desc-info-item">Alterar senha</p>
     </div>
   </div>
-  <div class="menus" *ngIf="!authService.isLoggedIn">
+  <!-- <div class="menus" *ngIf="!authService.isLoggedIn">
     <div class="menu-item" [routerLink]="['/home']" routerLinkActive="menu-item--active">
       <i class="menu-item-icon material-icons">home</i>
       <span class="menu-item-desc">Home</span>
@@ -33,7 +33,7 @@
       <i class="menu-item-icon material-icons">group_add</i>
       <span class="menu-item-desc">Registar</span>
     </div>
-  </div>
+  </div> -->
   <div *ngIf="authService.isLoggedIn">
     <div class="menus">
       <div class="menu-item" [routerLink]="['/home']" routerLinkActive="menu-item--active">
@@ -63,7 +63,7 @@
       <div class="menu-settings-info">
         Configurações
       </div>
-      <div class="menu-item" [routerLink]="['/generalregistration']" routerLinkActive="menu-item--active">
+      <div class="menu-item" [routerLink]="['/users']" routerLinkActive="menu-item--active">
         <i class="menu-item-icon material-icons">assignment</i>
         <span class="menu-item-desc">Cadastros gerais</span>
       </div>

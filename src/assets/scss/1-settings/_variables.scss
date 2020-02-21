@@ -1,0 +1,113 @@
+//
+// Variables
+// --------------------------------------------------
+
+//== Colors
+//
+
+//## White
+
+$white: #ffffff;
+
+// White / Medium Emphasis
+$white-medium: rgba(255, 255, 255, 0.7);
+
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker: rgba(0, 0, 0, 0.54);
+$gray-dark: rgba(0, 0, 0, 0.24);
+$gray: #9e9e9e;
+$gray-light: rgba(0, 0, 0, 0.24);
+$gray-lighter: #fbfcfd;
+$gray-pinkish: #e6d9d9;
+$gray-blue-light: #e5e5e5;
+
+//## Blue
+$blue-darker: #1976d2;
+$blue-dark: #2196f3;
+$blue-light: #e3f2fd;
+
+$brand-primary: $blue-dark !default;
+$brand-success: $blue-light;
+$brand-info: #17a2b8 !default;
+$brand-warning: #b39b18 !default;
+$brand-danger: #ff0000 !default;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: #ffffff !default;
+
+//** Global text color on `<body>`.
+$text-color: #000000 !default;
+
+//** Global textual link color.
+$link-color: $blue-dark !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+//== Typography
+//
+//## Font, line-height, and color for body text and more.
+
+$font-family-sans-serif: "Roboto", Helvetica, Arial, sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 16px !default;
+
+//Font menu
+$font-size-menu: 14px !default;
+$line-height-menu: 21px !default;
+
+$font-size-large: 18px;
+$font-size-small: 12px;
+
+//== Components
+//** Color for active items (e.g., navs or dropdowns).
+$component-active-color: $blue-dark !default;
+$component-active-bg-color: $blue-light !default;
+//** Background color for active items (e.g., navs or dropdowns).
+$component-active-bg: $blue-dark !default;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+$btn-font-weight: normal !default;
+
+$btn-default-color: #333 !default;
+$btn-default-bg: #fff !default;
+$btn-default-border: #ccc !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: $brand-primary !default;
+$btn-primary-border: darken($btn-primary-bg, 0%) !default;
+
+$btn-success-color: $blue-dark !default;
+$btn-success-bg: $brand-success !default;
+$btn-success-border: darken($btn-success-bg, 0%) !default;
+
+$btn-info-color: #fff !default;
+$btn-info-bg: $brand-info !default;
+$btn-info-border: darken($btn-info-bg, 0%) !default;
+
+$btn-warning-color: #fff !default;
+$btn-warning-bg: $brand-warning !default;
+$btn-warning-border: darken($btn-warning-bg, 0%) !default;
+
+$btn-danger-color: #fff !default;
+$btn-danger-bg: $brand-danger !default;
+$btn-danger-border: darken($btn-danger-bg, 0%) !default;
+
+$btn-link-disabled-color: $gray-light !default;
+
+$btn-disabled-bg: #a7a7a7;
+$btn-disabled-color: #ffffff;
+$btn-disabled-border: #a7a7a7;

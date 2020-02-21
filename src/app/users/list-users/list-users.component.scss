@@ -1,0 +1,98 @@
+@import "src/assets/scss/simple.scss";
+
+$grid-margin-left: 34px;
+$grid-title-margin-top: 24px;
+$grid-items-min-width: 250px;
+
+:host {
+  height: 100%;
+  overflow: hidden;
+}
+
+.grid-container {
+  margin-left: 34px;
+
+  .grid {
+    border: 1px solid $gray-blue-light;
+    padding-bottom: 20px;
+
+    .grid-title {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 19px;
+      margin-top: $grid-title-margin-top;
+      border-left: 1px solid $gray-pinkish;
+      min-width: $grid-items-min-width;
+      text-align: center;
+      max-height: 19px;
+
+      .filter-icons {
+        transform: rotate(90deg) !important;
+        font-size: 16px;
+      }
+    }
+
+    .grid-items {
+      padding-top: 31px;
+      border-left: 1px solid $gray-pinkish;
+      min-width: $grid-items-min-width;
+    }
+
+    .desc {
+      font-size: 16px;
+      padding-left: 40px !important;
+    }
+  }
+
+  .items-card {
+    display: flex;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+
+    .items-card-photo {
+      margin-left: 30px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+      border-radius: 50%;
+
+      .photo {
+        flex: 1 0 auto;
+        background-size: 100%;
+        width: auto;
+        height: 100%;
+        margin-left: -25%;
+        margin-right: -25%;
+      }
+    }
+    .items-card-container {
+      padding-left: 16px;
+
+      .items-card-title {
+        color: $text-color;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500 !important;
+        font-size: 14px !important;
+        line-height: 21px !important;
+        letter-spacing: 0.1px;
+        height: 21px;
+      }
+
+      .items-card-adresses {
+        font-size: 12px !important;
+        line-height: 15px !important;
+        letter-spacing: 0.4px;
+        height: 15px;
+        color: rgba(0, 0, 0, 0.54) !important;
+      }
+    }
+  }
+}

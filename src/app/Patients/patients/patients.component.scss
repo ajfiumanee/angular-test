@@ -1,0 +1,188 @@
+@import "src/assets/scss/simple.scss";
+
+$filter-card-margin-bottom: 37px;
+$filter-card-margin-left: 37px;
+$filter-card-font-title: 16px;
+$filter-card-font-line-height: 19px;
+
+$filter-card-tile-margin-bottom: 6px;
+
+$input-background: $white;
+$input-border: 1px solid $gray-blue-light;
+$input-box-sizing: border-box;
+$input-border-radius: 4px;
+$input-color: $blue-dark;
+$input-min-width: 215px;
+$input-min-height: 47px;
+$input-seach: $text-color;
+$input-seach-border: 1px solid $gray;
+$input-text-padding-left: 21px;
+
+:host {
+  min-height: 100%;
+  height: 100%;
+  max-width: 1078px;
+  overflow-x: visible;
+}
+
+.header {
+  display: flex;
+  height: 110px;
+  flex-direction: row;
+
+  .header-title {
+    font-size: 26px;
+    line-height: 30px;
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+
+  .material-icons {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .header-title {
+    display: relative;
+    margin: auto;
+  }
+}
+
+.filter-container {
+  max-width: 1078px;
+  width: 100%;
+  .filter-row {
+    display: flex;
+    flex-direction: row;
+    margin-left: 27px;
+
+    .filter-column {
+      display: flex;
+      flex-direction: row;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      .filter-left {
+        flex: 1;
+        min-width: 71%;
+      }
+      .filter-center {
+        flex: 1;
+        max-width: 1%;
+        border-left: 1px solid $gray-pinkish;
+      }
+      .filter-right {
+        flex: 1;
+        max-width: 24%;
+      }
+    }
+  }
+  .filter-bottom {
+    margin-bottom: 32px;
+    margin-left: 27px;
+  }
+}
+
+.filter-card {
+  margin-left: $filter-card-margin-left;
+  margin-bottom: $filter-card-margin-bottom;
+  font-size: $filter-card-font-title;
+  line-height: $filter-card-font-line-height;
+  min-width: $input-min-width;
+  padding: 0px;
+
+  .filter-itens-desc {
+    min-height: $input-min-height;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    .autocomplete {
+      min-height: $input-min-height;
+      background: $input-background;
+      border: $input-border;
+      box-sizing: $input-box-sizing;
+      border-radius: $input-border-radius;
+      padding-left: $input-text-padding-left;
+
+      color: $input-color;
+      min-width: $input-min-width;
+    }
+  }
+
+  .filter-card-title {
+    margin-bottom: $filter-card-tile-margin-bottom;
+  }
+}
+
+.filter-seach {
+  margin-left: $filter-card-margin-left;
+  font-size: $filter-card-font-title;
+  line-height: $filter-card-font-line-height;
+  min-width: $input-min-width;
+  padding: 0px;
+
+  .filter-seach-itens-desc {
+    min-height: $input-min-height;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    .filter-seach-input {
+      min-height: $input-min-height;
+      background: $gray-lighter;
+      border: none;
+      border-bottom: $input-seach-border;
+      box-sizing: $input-box-sizing;
+      border-radius: $input-border-radius;
+      color: $input-color;
+      padding-left: $input-text-padding-left;
+      width: 100%;
+    }
+  }
+}
+
+.icons {
+  display: inline;
+  color: $input-color;
+  margin: auto;
+  position: relative;
+  top: 5px;
+  left: 8px;
+  border-radius: 50%;
+}
+.icons-container {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 1285.56px) {
+  // .filter-left {
+  //   clear: both;
+  //   float: none;
+  //   width: 100%;
+  // }
+
+  // .filter-center {
+  //   float: none;
+  //   display: none;
+  // }
+
+  // .filter-all {
+  //   clear: both;
+  //   float: none;
+  //   width: 100%;
+  //   padding-top: 10px;
+  // }
+}

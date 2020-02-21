@@ -1,11 +1,10 @@
 <!-- <ng-progress></ng-progress> -->
-<ng-container>
-    <div class="template-main">
-        <div class="template-main__sidebar">
-            <app-sidebar  [isSidebarOpen]="isSidebarOpen" (toggle)="toggleSidebar()"></app-sidebar>
-        </div>
-        <div class="template-main__container">
-            <router-outlet></router-outlet>
-        </div>
+<div class="template-main">
+    <div class="template-main__sidebar">
+        <app-sidebar *ngIf="(template$ | async) == 'main'" [isSidebarOpen]="isSidebarOpen" (toggle)="toggleSidebar()">
+        </app-sidebar>
     </div>
-</ng-container>
+    <div class="template-main__container">
+        <router-outlet></router-outlet>
+    </div>
+</div>

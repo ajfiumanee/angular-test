@@ -1,0 +1,19 @@
+// Typography
+
+@mixin text-menu {
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: $font-size-menu;
+  line-height: $line-height-menu;
+  letter-spacing: 0.1px;
+  color: $text-color;
+}
+
+@mixin text-menu-info {
+  font-family: $font-family-sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $font-size-menu;
+  line-height: $line-height-menu;
+}

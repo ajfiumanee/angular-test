@@ -1,0 +1,91 @@
+@import "src/assets/scss/simple.scss";
+
+$edit-card-margin-bottom: 37px;
+$edit-card-margin-left: 37px;
+$edit-card-font-title: 16px;
+$edit-card-font-line-height: 19px;
+
+$edit-card-tile-margin-bottom: 6px;
+
+$input-edit-background: $white;
+$input-edit-border: 1px solid $gray-blue-light;
+$input-edit-box-sizing: border-box;
+$input-edit-border-radius: 4px;
+$input-edit-color: $blue-dark;
+$input-edit-min-width: 215px;
+$input-edit-min-height: 47px;
+$input-edit-seach: $text-color;
+$input-edit-seach-border: 1px solid $gray;
+$input-edit-text-padding-left: 21px;
+
+:host {
+  min-height: 100%;
+  height: 100%;
+  overflow-x: visible;
+  max-width: 1078px;
+}
+.row {
+  max-width: 1078px;
+}
+.edit-container {
+  margin-left: 37px;
+
+  .edit-card {
+    margin-left: $edit-card-margin-left;
+    margin-bottom: $edit-card-margin-bottom;
+    font-size: $edit-card-font-title;
+    line-height: $edit-card-font-line-height;
+    padding: 0px;
+
+    .edit-itens-desc {
+      min-height: $input-edit-min-height;
+      position: relative;
+      padding: 0;
+      margin: 0;
+      border: 0;
+
+      .text-edit {
+        min-height: $input-edit-min-height;
+        background: $input-edit-background;
+        border: $input-edit-border;
+        box-sizing: $input-edit-box-sizing;
+        border-radius: $input-edit-border-radius;
+        padding-left: $input-edit-text-padding-left;
+
+        color: $input-edit-color;
+        min-width: 100%;
+      }
+
+      .checkbox {
+        min-width: 30px;
+        min-height: 30px;
+        margin-top: 4px;
+        color: #2196f3;
+        border: 1px solid #9e9e9e;
+        box-sizing: border-box;
+        border-radius: 3px;
+      }
+    }
+
+    .edit-card-title {
+      margin-bottom: $edit-card-tile-margin-bottom;
+    }
+  }
+  .icons {
+    display: inline;
+    color: $input-edit-color;
+    margin: auto;
+    position: relative;
+    top: 5px;
+    left: 8px;
+    border-radius: 50%;
+  }
+  .icons-container {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+  }
+}

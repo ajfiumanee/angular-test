@@ -1,8 +1,29 @@
-<div class="top-card">
+<div class="top-card-row">
 
-  <p> <i class="top-card-icon material-icons">people</i> </p>
-  <p class="top-card-info">500</p> 
-  <p class="top-card-description"> Pacientes</p> 
+  <div class="top-card">
+    <i class="top-card__icon material-icons">people</i>
+    <p class="top-card__info">500</p>
+    <p class="top-card__description">Pacientes</p>
+  </div>
+
+  <div class="top-card" [class.top-card--selected]="true">
+    <i class="top-card__icon material-icons">assignment_turned_in</i>
+    <p class="top-card__info">32</p>
+    <p class="top-card__description">Relat. Finalizados </p>
+  </div>
+
+  <div class="top-card">
+    <i class="top-card-icon material-icons">notifications</i>
+    <p class="top-card-info">2</p>
+    <p class="top-card-description">Notificações</p>
+  </div>
+
+  <div class="top-card">
+    <i class="top-card-icon material-icons">report</i>
+    <p class="top-card-info">4</p>
+    <p class="top-card-description">Pendências</p>
+  </div>
+
 </div>
 
 
