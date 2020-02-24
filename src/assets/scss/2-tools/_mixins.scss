@@ -8,6 +8,10 @@
 
 // Skins
 
+@mixin col-xs-2 {
+    @extend col-xs-2;
+}
+
 // Layout
 @import "mixins/_clearfix";
 @import "mixins/_center-block";

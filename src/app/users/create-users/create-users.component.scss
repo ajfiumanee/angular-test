@@ -26,6 +26,7 @@ $input-edit-text-padding-left: 21px;
 }
 .row {
   max-width: 1078px;
+  min-width: 250px;
 }
 .edit-container {
   margin-left: 37px;
@@ -53,6 +54,7 @@ $input-edit-text-padding-left: 21px;
         padding-left: $input-edit-text-padding-left;
 
         color: $input-edit-color;
+        max-width: 100%;
         min-width: 100%;
       }
 
@@ -60,7 +62,7 @@ $input-edit-text-padding-left: 21px;
         min-width: 30px;
         min-height: 30px;
         margin-top: 4px;
-        color: #2196f3;
+        color: $blue-dark;
         border: 1px solid #9e9e9e;
         box-sizing: border-box;
         border-radius: 3px;
@@ -79,11 +81,17 @@ $input-edit-text-padding-left: 21px;
     top: 5px;
     left: 8px;
     border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+      color: $text-color;
+      background-color: $blue-dark;
+    }
   }
   .icons-container {
     position: absolute;
-    top: 9px;
-    right: 10px;
+    top: 6px;
+    right: 0px;
     width: 35px;
     height: 35px;
     overflow: hidden;

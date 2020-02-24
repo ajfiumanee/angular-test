@@ -24,7 +24,7 @@ $grid-items-min-width: 250px;
       line-height: 19px;
       margin-top: $grid-title-margin-top;
       border-left: 1px solid $gray-pinkish;
-      min-width: $grid-items-min-width;
+      // min-width: $grid-items-min-width;
       text-align: center;
       max-height: 19px;
 
@@ -37,7 +37,7 @@ $grid-items-min-width: 250px;
     .grid-items {
       padding-top: 31px;
       border-left: 1px solid $gray-pinkish;
-      min-width: $grid-items-min-width;
+      // min-width: $grid-items-min-width;
     }
 
     .desc {

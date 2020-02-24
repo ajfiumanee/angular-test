@@ -1,19 +1,19 @@
 <div class="grid-container">
     <div class="grid">
         <div class="row no-margin ">
-            <div class="col-xs-1 grid-title" style="border-left: none;">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 grid-title" style="border-left: none;">
                 <div class="title">
                     <span>Nome</span>
                     <i class="material-icons filter-icons">play_arrow</i>
                 </div>
             </div>
-            <div class="col-xs-1 grid-title">
+            <div class="col-xs-4 col-sm-5 col-md-5 col-lg-4 grid-title">
                 <div class="title">
                     <span>E-mail</span>
                     <i class="material-icons filter-icons">play_arrow</i>
                 </div>
             </div>
-            <div class="col-xs-1 grid-title">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-4 grid-title">
                 <div class="title">
                     <span>Perfil</span>
                     <i class="material-icons filter-icons">play_arrow</i>
@@ -22,7 +22,7 @@
         </div>
         <!-- Itens -->
         <div class="row no-margin" *ngFor="let user of users" >
-            <div class="col-xs-1 grid-items" style="border-left: none;">
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 grid-items" style="border-left: none;">
                 <div class="items-card">
                     <div class="items-card-photo">
                         <img class="photo"
@@ -31,7 +31,7 @@
                     </div>
                     <div class="items-card-container">
                         <div class="items-card-title">
-                            <span>{{user.displayName}}</span>
+                            <span>{{(user.displayName) ? user.displayName : 'n/D'}}</span>
                         </div>
                         <div class="items-card-adresses">
                             <span>{{user.emailVerified}}</span>
@@ -39,10 +39,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-1 grid-items desc">
+            <div class="col-xs-4 col-sm-5 col-md-5 col-lg-4 grid-items desc">
                 <span>{{user.email}}</span>
             </div>
-            <div class="col-xs-1 grid-items desc">
+            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-4 grid-items desc">
                 <span>{{user.providerId}}</span>
             </div>
         </div>

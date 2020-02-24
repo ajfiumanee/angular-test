@@ -79,7 +79,7 @@ $component-active-bg: $blue-dark !default;
 //== Buttons
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
-
+$btn-min-width: 110px;
 $btn-font-weight: normal !default;
 
 $btn-default-color: #333 !default;

@@ -1,6 +1,5 @@
 @mixin button-variant($color, $background, $border) {
-  
-  min-width: 110px !important;
+  min-width: $btn-min-width !important;
   min-height: 47px !important;
   color: $color;
   background-color: $background;
