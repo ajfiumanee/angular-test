@@ -1,4 +1,5 @@
-@import "src/assets/scss/simple.scss";
+//@import "src/assets/scss/simple.scss";
+@import "src/styles.scss";
 
 $edit-card-margin-bottom: 37px;
 $edit-card-margin-left: 37px;
@@ -22,14 +23,15 @@ $input-edit-text-padding-left: 21px;
   min-height: 100%;
   height: 100%;
   overflow-x: visible;
-  max-width: 1078px;
+  max-width: 1050px;
 }
 .row {
-  max-width: 1078px;
+  max-width: 1050px;
   min-width: 250px;
 }
 .edit-container {
   margin-left: 37px;
+  max-width: 1050px;
 
   .edit-card {
     margin-left: $edit-card-margin-left;
@@ -95,5 +97,12 @@ $input-edit-text-padding-left: 21px;
     width: 35px;
     height: 35px;
     overflow: hidden;
+  }
+  .button-container {
+    min-width: $btn-min-width !important;
+
+    &:last-child {
+      margin-left: 15px;
+    }
   }
 }

@@ -1,4 +1,5 @@
-@import "src/assets/scss/simple.scss";
+//@import "src/assets/scss/simple.scss";
+@import "src/styles.scss";
 
 $sidebar-width: 52px;
 $sidebar-width-expanded: 255px;
@@ -194,7 +195,6 @@ $icon-color: rgba(0, 0, 0, 0.87);
 }
 
 .menu-settings-info {
-  @include text-menu-info;
   margin-left: 16px;
   margin-bottom: 27px;
   margin-top: 16px;
@@ -244,7 +244,6 @@ $icon-color: rgba(0, 0, 0, 0.87);
   flex: 1;
   text-align: left;
   margin-left: 35px;
-  @include text-menu;
 }
 
 .material-icons {

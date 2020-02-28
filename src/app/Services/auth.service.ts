@@ -3,7 +3,8 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from "@angular/router";
-import { User } from '../Models/user.model';
+import { User, UserCreating } from '../Models/user.model';
+import { randomPassword } from '../shared/randomPassword';
 
 @Injectable({
   providedIn: 'root'
@@ -74,6 +75,17 @@ export class AuthService {
       })
   }
 
+  // Sign up with email/password MANUAL
+  registerUser(user: UserCreating) {
+    return this.afAuth.auth.createUserWithEmailAndPassword(user.Email, randomPassword())
+      .then((result) => {
+        user.Uid = result.user.uid;
+        this.setUser(user);
+      }).catch((error) => {
+        window.alert(error.message);
+      })
+  }
+
   // Send email verfificaiton when new user sign up
   SendVerificationMail() {
     return this.afAuth.auth.currentUser.sendEmailVerification()
@@ -133,6 +145,17 @@ export class AuthService {
       displayName: user.displayName,
       photoURL: user.photoURL,
       emailVerified: user.emailVerified
+    }
+    return userRef.set(userData, {
+      merge: true
+    })
+  }
+
+  setUser(user: UserCreating) {
+
+    const userRef: AngularFirestoreDocument<any> = this.afs.doc(`users/${user.Uid}`);
+    const userData: UserCreating = {
+      ...user
     }
     return userRef.set(userData, {
       merge: true

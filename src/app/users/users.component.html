@@ -20,12 +20,16 @@
             </div>
         </div>
         <div class="col-xs-8 col-sm-6 col-md-2 col-lg-2 filter-card">
-            <div class="filter-card-title">Perfil</div>
+            <div class="filter-card-title">Cargo</div>
             <div class="filter-itens-desc">
-                <input id="filterPerfil" class="autocomplete" type="text" placeholder="P.O.">
+                <!-- <input id="filterPerfil" class="autocomplete" type="text" placeholder="P.O.">
                 <div class="icons-container">
                     <i class="material-icons icons">keyboard_arrow_down</i>
-                </div>
+                </div> -->
+                <select class="autocomplete">
+                    <option value="">Selecione o cargo</option>
+                    <option *ngFor="let rol of role" value="{{uid}}">{{rol.role}}</option>
+                </select>
             </div>
         </div>
         <div class="col-xs-8 col-sm-6 col-md-2 col-lg-1 filter-button" style="margin-top: auto;">

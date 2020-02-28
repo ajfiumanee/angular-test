@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { User } from 'src/app/Models/user.model';
+import { User, UserCreating } from 'src/app/Models/user.model';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,9 @@ import { User } from 'src/app/Models/user.model';
 export class UsersService {
   private usersoucer = new BehaviorSubject({ patient: null, id: '' });
   user = this.usersoucer.asObservable();
-  constructor(private firestore: AngularFirestore) { }
+ 
+  constructor(private firestore: AngularFirestore,
+    private auth: AuthService) { }
 
   getAllusers() {
     return this.firestore.collection('users').snapshotChanges();

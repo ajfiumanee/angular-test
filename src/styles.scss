@@ -1,0 +1,45 @@
+@import "./assets/scss/variables";
+@import "./assets/scss/button";
+
+:root {
+  --font-family-sans-serif: $font-family-sans-serif;
+}
+
+html,
+body {
+  font-family: $font-family-sans-serif;
+}
+
+.is-invalid{
+  background-image: none !important;
+}
+
+input {
+  color: $blue-dark;
+  &:hover {
+    color: $blue-dark;
+  }
+  &:invalid {
+    color: red;
+  }
+}
+
+select.custom-select::-ms-expand {
+  display: none;
+  cursor: pointer;
+}
+
+select.custom-select {
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  text-indent: 0.01px;
+  text-overflow: "";
+  background: url("https://img.icons8.com/material/24/000000/expand-arrow--v1.png") no-repeat right #fff !important;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}

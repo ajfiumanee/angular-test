@@ -1,62 +1,104 @@
 <div class="edit-container">
     <h1>Cadastro de Usuarios</h1>
-    <div class="grid">
+    <form [formGroup]="formB" autocomplete="off">
         <div class="row">
-            <div class="col-xs-10 col-sm-5 col-md-5 col-lg-5 edit-card">
-                <div class="edit-card-title">Nome</div>
-                <div class="edit-itens-desc">
-                    <input id="editNome" class="text-edit" type="text" placeholder="nome do usuário"
-                        style="width: 100%;">
+            <div class="form-group col-xs-8 col-sm-10 col-md-5 col-lg-5 edit-card">
+                <label for="editName">Nome</label>
+                <input formControlName="editName" id="editName" class="form-control" type="text"
+                    placeholder="nome do usuário" style="width: 100%;"
+                    [ngClass]="{ 'is-invalid': f.editName.errors && f.editName.touched }">
+                <div *ngIf="f.editName.errors" class="invalid-feedback">
+                    <div *ngIf="f.editName.errors.required">Nome é obrigatório!</div>
                 </div>
             </div>
-            <div class="col-xs-10 col-sm-5 col-md-5 col-lg-5 edit-card">
-                <div class="edit-card-title">E-mail</div>
-                <div class="edit-itens-desc">
-                    <input id="editNome" class="text-edit" type="text" placeholder="E-mail do usuário"
-                        style="width: 100%;">
+            <div class="form-group col-xs-8 col-sm-6 col-md-6 col-lg-3 edit-card">
+                <label for="selCargo">Cargo</label>
+                <select class="form-control custom-select" id="selCargo" formControlName="selCargo"
+                    [ngClass]="{ 'is-invalid': f.selCargo.errors && f.selCargo.touched}" style="width: 100%;">
+                    <option selected value="">Selecione...</option>
+                    <option *ngFor="let rol of role" value="{{rol.uid}}">{{rol.role}}</option>
+                </select>
+                <div *ngIf="f.selCargo.errors " class="invalid-feedback">
+                    <div *ngIf="f.selCargo.errors.required">Cargo é obrigatório!</div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-10 col-sm-5 col-md-5 col-lg-2 edit-card">
-                <div class="edit-card-title">CPF</div>
-                <div class="edit-itens-desc">
-                    <input id="editNome" class="text-edit" type="text" placeholder="CPF do usuário">
+            <div class="form-group col-xs-8 col-sm-10 col-md-5 col-lg-5 edit-card">
+                <label for="editEmail">E-mail</label>
+                <input formControlName="editEmail" id="editEmail" class="form-control" type="email"
+                    placeholder="E-mail do usuário" style="width: 100%;"
+                    [ngClass]="{ 'is-invalid': f.editEmail.errors && f.editEmail.touched}">
+                <div *ngIf="f.editEmail.errors" class="invalid-feedback">
+                    <div *ngIf="f.editEmail.errors.required">E-mail é obrigatório!</div>
+                    <div *ngIf="!f.editEmail.errors.required && f.editEmail.errors">E-mail inválido!</div>
                 </div>
             </div>
-            <div class="col-xs-10 col-sm-5 col-md-5 col-lg-2 edit-card">
-                <div class="edit-card-title">Telefone</div>
-                <div class="edit-itens-desc">
-                    <input id="editNome" class="text-edit" type="text" placeholder="telefone do usuário">
-                </div>
-            </div>
-            <div class="col-xs-10 col-sm-6 col-md-6 col-lg-3 edit-card">
-                <div class="edit-card-title">Perfil de acesso</div>
-                <div class="edit-itens-desc">
-                    <input id="editNome" class="text-edit" type="text" placeholder="Perfil de acesso do usuário">
-                    <div class="icons-container">
-                        <i class="material-icons icons">keyboard_arrow_down</i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-1 edit-card">
-                <div class="edit-card-title">Ativo</div>
-                <div class="edit-itens-desc">
-                    <input id="editNome" class="checkbox" type="checkbox" value="false">
+            <div class="form-group col-xs-8 col-sm-10 col-md-5 col-lg-5 edit-card">
+                <label for="editConfirmEmail">Confirma o E-mail</label>
+                <input formControlName="editConfirmEmail" id="editConfirmEmail" class="form-control" type="email"
+                    placeholder="confirma o E-mail do usuário" style="width: 100%;"
+                    [ngClass]="{ 'is-invalid': f.editConfirmEmail.errors && f.editConfirmEmail.touched}">
+                <div *ngIf="f.editConfirmEmail.errors" class="invalid-feedback">
+                    <div *ngIf="f.editConfirmEmail.errors.required">Confirmar E-mail é obrigatório!</div>
+                    <div *ngIf="!f.editConfirmEmail.errors.required && f.editConfirmEmail.errors.mustMatch">E-mail
+                        diferentes!</div>
+                    <div *ngIf="!f.editConfirmEmail.errors.required && f.editConfirmEmail.errors">E-mail inválido!</div>
                 </div>
             </div>
         </div>
         <div class="row">
+            <div class="form-group col-xs-8 col-sm-10 col-md-5 col-lg-2 edit-card">
+                <label for="editCPF">CPF</label>
+                <input id="editCPF" formControlName="editCPF" class="form-control" type="text"
+                    placeholder="CPF do usuário" [ngClass]="{ 'is-invalid': f.editCPF.errors&& f.editCPF.touched }">
+                <div *ngIf="f.editCPF.errors" class="invalid-feedback">
+                    <div *ngIf="f.editCPF.errors.required">CPF é obrigatório!</div>
+                    <div *ngIf="!f.editCPF.errors.required && !f.editCPF.errors.isValid">CPF inválido!</div>
+                </div>
+            </div>
+            <div class="form-group col-xs-8 col-sm-10 col-md-5 col-lg-2 edit-card">
+                <label for="editRG">RG</label>
+                <input id="editRG" formControlName="editRG" class="form-control" type="text" placeholder="RG do usuário"
+                    [ngClass]="{ 'is-invalid': f.editRG.errors && f.editRG.touched}">
+                <div *ngIf="f.editRG.errors" class="invalid-feedback">
+                    <div *ngIf="f.editRG.errors.required">RG é obrigatório!</div>
+                </div>
+            </div>
+            <div class="form-group col-xs-8 col-sm-10 col-md-5 col-lg-2 edit-card">
+                <label for="editPhone">Telefone</label>
+                <input id="editPhone" formControlName="editPhone" class="form-control" type="tel"
+                    placeholder="telefone do usuário"
+                    [ngClass]="{'is-invalid': f.editPhone.errors&& f.editPhone.touched }"
+                    ng-pattern="/^\([1-9]{2}\)[0-9]{4,5}-[0-9]{4}$/">
+                <div *ngIf="f.editPhone.errors" class="invalid-feedback">
+                    <div *ngIf="f.editPhone.errors.required">Telefone é obrigatório!</div>
+                    <div *ngIf=" !f.editPhone.errors.required && f.editPhone.errors">Telefone inválido!</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 edit-card">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="editActive">
+                    <label class="custom-control-label" for="editActive">Check this custom checkbox</label>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-end">
             <div class="col-xs-11">
-                <div class="row end-xs">
-                    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
-                        <button class="btn btn-success">Salvar</button>
+                <div class="row ">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 button-container">
+                        <button class="btn btn-success" type="submit" (click)="setUser()">Salvar</button>
                     </div>
-                    <div class="col-xs-3 col-sm-3 col-md-2 col-lg-2">
+                    <div class="col-xs-4 col-sm-3 col-md-2 col-lg-1 button-container">
                         <button class="btn btn-danger">Cancelar</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </form>
+    <!-- <p>Error: {{f.selCargo.value}}</p>
+    <p>Form value: {{ formB.value | json }}</p>
+    <p>Form status: {{ formB.status | json }}</p> -->
 </div>
